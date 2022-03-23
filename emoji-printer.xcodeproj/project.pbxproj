@@ -12,6 +12,10 @@
 		12823E0D27EAE1F30057D740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12823E0C27EAE1F30057D740 /* Assets.xcassets */; };
 		12823E1027EAE1F30057D740 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12823E0F27EAE1F30057D740 /* Preview Assets.xcassets */; };
 		12823E1727EAE2EE0057D740 /* AddEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12823E1627EAE2EE0057D740 /* AddEmojiView.swift */; };
+		12823E1A27EAE8430057D740 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 12823E1927EAE8430057D740 /* FirebaseDatabase */; };
+		12823E1C27EAE8430057D740 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 12823E1B27EAE8430057D740 /* FirebaseDatabaseSwift-Beta */; };
+		12823E2027EAE8BF0057D740 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12823E1F27EAE8BF0057D740 /* Emoji.swift */; };
+		12823E2227EAE8F40057D740 /* EmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12823E2127EAE8F40057D740 /* EmojiViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,8 @@
 		12823E0C27EAE1F30057D740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12823E0F27EAE1F30057D740 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12823E1627EAE2EE0057D740 /* AddEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmojiView.swift; sourceTree = "<group>"; };
+		12823E1F27EAE8BF0057D740 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		12823E2127EAE8F40057D740 /* EmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12823E1C27EAE8430057D740 /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				12823E1A27EAE8430057D740 /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,8 @@
 				12823E0C27EAE1F30057D740 /* Assets.xcassets */,
 				12823E0E27EAE1F30057D740 /* Preview Content */,
 				12823E1627EAE2EE0057D740 /* AddEmojiView.swift */,
+				12823E1F27EAE8BF0057D740 /* Emoji.swift */,
+				12823E2127EAE8F40057D740 /* EmojiViewModel.swift */,
 			);
 			path = "emoji-printer";
 			sourceTree = "<group>";
@@ -86,6 +96,10 @@
 			dependencies = (
 			);
 			name = "emoji-printer";
+			packageProductDependencies = (
+				12823E1927EAE8430057D740 /* FirebaseDatabase */,
+				12823E1B27EAE8430057D740 /* FirebaseDatabaseSwift-Beta */,
+			);
 			productName = "emoji-printer";
 			productReference = 12823E0527EAE1EE0057D740 /* emoji-printer.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 12823DFC27EAE1EE0057D740;
+			packageReferences = (
+				12823E1827EAE8430057D740 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 12823E0627EAE1EE0057D740 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,6 +159,8 @@
 			files = (
 				12823E0B27EAE1EE0057D740 /* ContentView.swift in Sources */,
 				12823E0927EAE1EE0057D740 /* emoji_printerApp.swift in Sources */,
+				12823E2027EAE8BF0057D740 /* Emoji.swift in Sources */,
+				12823E2227EAE8F40057D740 /* EmojiViewModel.swift in Sources */,
 				12823E1727EAE2EE0057D740 /* AddEmojiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +362,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12823E1827EAE8430057D740 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 8.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12823E1927EAE8430057D740 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12823E1827EAE8430057D740 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		12823E1B27EAE8430057D740 /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12823E1827EAE8430057D740 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 12823DFD27EAE1EE0057D740 /* Project object */;
 }

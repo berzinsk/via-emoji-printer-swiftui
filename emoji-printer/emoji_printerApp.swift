@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct emoji_printerApp: App {
+  init() {
+    FirebaseApp.configure()
+  }
+
   var body: some Scene {
     WindowGroup {
       ContentView()

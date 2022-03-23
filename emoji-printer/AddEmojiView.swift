@@ -9,8 +9,7 @@ import SwiftUI
 
 struct AddEmojiView: View {
   @Binding var isPresented: Bool
-  @Binding var emojis: [String]
-  @Binding var emojiString: String
+  var viewModel: EmojiViewModel
   @State private var text = ""
   
   var body: some View {
@@ -18,8 +17,7 @@ struct AddEmojiView: View {
       Text("Hello, World!")
       TextField("Enter emoji", text: $text)
       Button("Add and close") {
-        emojis.append(text)
-        emojiString = emojis.joined(separator: " ")
+        viewModel.add(emojiIcon: text)
         isPresented = false
       }
     }
